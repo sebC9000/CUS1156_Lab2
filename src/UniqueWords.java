@@ -11,37 +11,27 @@ public class UniqueWords
    {
 	  int count = 0;
 	  
-      for (int i = 1; i < list.size(); i++) {
-    	  
-    	  for (int j = 0; j < i; j++) {    	   
-    	    //If two words are the same, the counter increments.
-    		//---------------------------------//
-			if(list.get(i).equals(list.get(j))) {		
-				count++;				
-				break;				
-			}			
+      for (int i = 0; i < list.size(); i++)
+      {		 for (int j = 0; j < list.size(); j++)
+		 {
+			
 		 }
       }
-      
-      //Subtracts the size of the list with the number of repetitions. 
-      //---------------------------------------//
-	  return list.size() - count;
+	  return count;
    }
 
    public static void main(String[] args)
    {
       ArrayList <String> words = new ArrayList<>();
-      
       words.add("apple");
 	  words.add("orange");
 	  words.add("blackboard");
 	  words.add("apple");
 	  words.add("orange");
 	  words.add("sun");
-	  words.add("moon"); 	 
-	  
+	  words.add("moon");
+   
 	  int unique = countUnique(words);
-	  
       System.out.println(words + " has " + unique + " unique words");
    }
 }
